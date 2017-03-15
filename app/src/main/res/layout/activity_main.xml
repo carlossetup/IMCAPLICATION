@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.imcaplication.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculadora de IMC "
+            android:foregroundGravity="center_vertical"
+            android:textSize="30sp"
+            android:textStyle="normal|bold"
+            android:gravity="center_horizontal" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=" Peso Kg:"
+                android:textSize="20dp"
+                android:id="@+id/txtPeso" />
+
+            <EditText
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/edtPeso"
+                android:gravity="center_vertical|center_horizontal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Altura Cm: "
+                android:textSize="20dp"
+                android:id="@+id/txtAltura" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/edtAltura"
+                android:layout_width="166dp"
+                android:gravity="center_vertical|center_horizontal" />
+        </TableRow>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Sexo"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino"
+                    android:id="@+id/rbMasc"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Femenino"
+                    android:id="@+id/rbFemenino"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/edtDiag"
+                android:textSize="25dp"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Limpiar"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="limpar"
+                android:textStyle="normal|bold"
+                android:background="@android:color/holo_blue_light"
+                android:textSize="25sp"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Calcular IMC"
+                android:id="@+id/btnCalcular"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:onClick="calcular"
+                android:textStyle="normal|bold"
+                android:background="@android:color/holo_green_light"
+                android:textSize="25sp" />
+        </TableRow>
+
+    </LinearLayout>
+
+</RelativeLayout>
